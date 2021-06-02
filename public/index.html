@@ -2,7 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="javascripts/help.js"></script>
+    <script>
+        let h1Element = document.querySelector("h1");
+        h1Element.addEventListener("mouseover", mouseoverHandler);
+        h1Element.addEventListener("mouseout", mouseoutHandler);
+
+        function mouseoverHandler(event) {
+            event.target.style.backgroundColor = "red";
+        }
+
+        function mouseoutHandler(event) {
+            event.target.style.backgroundColor = "white";
+        }
+    </script>
 </head>
 <body>
 <h1>Welcome to my Page</h1>
